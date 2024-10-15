@@ -36,7 +36,12 @@ public class Main {
 //        Task1.3
                     case 2 -> {
                         System.out.println("Enter your char from 0 to 9");
-                        char x1 = scanner.next().charAt(0);
+                        String input = scanner.next();
+                        if (input.length() != 1 || input.charAt(0) < '0' || input.charAt(0) > '9') {
+                            System.out.println("Надо было ввести число от 0 до 9");
+                            break;
+                        }
+                        char x1 = input.charAt(0);
                         int answer1 = task.charToNum(x1);
                         System.out.println(answer1);
                     }
@@ -304,7 +309,7 @@ public class Main {
     }
 
     public boolean is2Digits (int x) {
-        return Integer.toString(x).length() == 2;
+        return (x >= 10 && x < 100) || (x<=-10 && x>-100);
     }
 
     public boolean isInRange (int a, int b, int num) {
