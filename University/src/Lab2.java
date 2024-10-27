@@ -39,9 +39,9 @@ public class Lab2 {
                         Time time2 = new Time(10000);
                         Time time3 = new Time(100000);
 
-                        System.out.println(time1.toString());
-                        System.out.println(time2.toString());
-                        System.out.println(time3.toString());
+                        System.out.println("10 секунд в отфомратированном виде: " + time1.toString());
+                        System.out.println("10000 секунд в отфомратированном виде: " +time2.toString());
+                        System.out.println("100000 секунд в отфомратированном виде: " +time3.toString())
 
                     }
 
