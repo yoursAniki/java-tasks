@@ -2,6 +2,9 @@ public class Time {
     private int seconds;
 
     public Time(int seconds) {
+        if(seconds<0) {
+            throw new Error("Секунд должно быть больше 0");
+        }
         this.seconds = seconds % 86400;
     }
 
